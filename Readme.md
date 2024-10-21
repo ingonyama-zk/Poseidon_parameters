@@ -5,6 +5,7 @@ For icicle supported curves/fields
 1. bare parameters are in [bare_parameters_t3](bare_parameters_t3)
 2. optimized parameters are in [optimized_parameters_t3](optimized_parameters_t3)
 3. poseidon hash for bare and optimized can be found in [poseidon_t3](poseidon_t3)
+   1. also has text_Vectors for three input, where the results of bare and optimized poseidon agree.
 
 For sage to run in terminal, it needs python venv with some packages. most dependencies are part of the [Ingonyama poseidon hash package](https://pypi.org/project/poseidon-hash/), so it is easy to just install it, since it installs numpy,numba etc all required by sage. But all data generated in this repository comes from first principles implementation of poseidon hash found [here](https://extgit.iaik.tugraz.at/krypto/hadeshash)
 
