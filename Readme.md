@@ -67,10 +67,10 @@ Generate bare parameters using the sage script [generate_params_poseidon.sage](g
 
 example:
 
-  * param for $t=3$, $\alpha=5$ for Bn254, prime field is 253 bit
+  * param for $t=3$, $\alpha=5$ for Bn254, prime field is 254 bit
 
   ```
-  sage generate_params_poseidon.sage 1 0 253 3 5 128 0x12AB655E9A2CA55660B44D1E5C37B00159AA76FED00000010A11800000000001
+  sage generate_params_poseidon.sage 1 0 254 3 5 128 0x30644E72E131A029B85045B68181585D2833E84879B9709143E1F593F0000001
   ```
 will generate `poseidon_params_n254_t3_alpha5_M128.txt` with bare unoptimized parameters. For all icicle supported curves/fields bare parameters for $t=3$ can be found in [bare_parameters_t3](bare_parameters_t3)
 
