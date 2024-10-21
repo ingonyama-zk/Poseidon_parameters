@@ -1,0 +1,20 @@
+## sage generate_params_poseidon.sage 1 0 64 3 5 128 0xFFFFFFFF00000001
+
+Params: n=64, t=3, alpha=5, M=128, R_F=8, R_P=26
+Modulus = 18446744069414584321
+Number of S-boxes: 50
+Number of round constants: 102
+Round constants for GF(p):
+['0xd139a9a5a7013b20', '0xf42fd8b72c9b8f4a', '0x34ea4af844e9a96e', '0x79bea190675a7751', '0x3a23dbd66cc58a4f', '0x7970a92572c3239b', '0x811bdfddc8eb1a3d', '0xfa87fe188c520cc9', '0x1f2abe4010fa60b8', '0xaf7d4b15e6583f91', '0xb52b91ecb22d0cb5', '0x337467baedbb3034', '0x65ae540c19485610', '0xb6dace571987f2a8', '0xcb498f1e96f057d9', '0x1d2462686b0206e2', '0xc295ed65ddcfb989', '0x49e26b5e3e5edabf', '0xbd107cbcce1dfc6d', '0x60f3c31c7a0f3fca', '0x5bda770129e6aa2c', '0x6cc21cbb2b70152b', '0x3542a1279c49cc0c', '0x681970c9fd6fd667', '0xd43cc9accfe64efa', '0x04f6e74758ba6ac0', '0xd01c89be54c7b429', '0xf2d049f58c79c66a', '0x81548c55cfabdeb6', '0xe48b50b9370f1b7f', '0xf1848e7dd8933a8a', '0xff5a4a05989054fa', '0x5751aa09248317de', '0x27f7ab040fa5e1bb', '0x25f26114ba946ece', '0x66fdfd6c75f0c9b5', '0xaa0c9da742c073cd', '0x4f30190d5aef1e34', '0x7757151c0e83606b', '0x0040f9df7bad804a', '0x93c8ccf38bb78eda', '0xbea6bdb84494be05', '0xc32cad2a444aa534', '0x56ba0b739606c19b', '0x6d1b3a4ce7ae4f6c', '0x2ac6043ebea85eba', '0x879e053458b1bd22', '0xa96543726d2366cf', '0xd9fa38daf10c5ca4', '0xd3ad4a0cf194b2c9', '0x5f0d54778291d76e', '0x5e5ebac4199bddda', '0xa5ccff652d7e0379', '0x5cb52d1e76899a03', '0x2522c75b869c05e9', '0x00d02813e174cd15', '0x6e0e50259ab1ef1c', '0xc0a433ed0022c05a', '0xc20adc8524fc7afd', '0x859af64e17a09d0a', '0xed20f475e5a99ccd', '0x6430de2936b8e121', '0x48fc7588191549eb', '0x7bd5d150a3d24b5b', '0xb2fd5452ead18106', '0xb5ba1e18cdd3f509', '0x666092d16351dec9', '0x9f9d3368de0bad44', '0xbe146073e1b9f837', '0x783e09fef4dc04e4', '0x93fdf14215ad2c22', '0x8beb68bbbea06b27', '0x1c9c4911a6136885', '0xc47a357b73b66938', '0x7d029de7e09c2e74', '0x49f4678c9a58de75', '0xbe1cafacf9731a65', '0x06bc732a62dbd55e', '0xbc93a152f23569c2', '0x0f6ea026c067272c', '0x04ee156e3f45f4da', '0xd582a56e20101a6a', '0x6661e6f260e589a0', '0x33ce260f7c6c48a1', '0xe0bf3b16bc0fef5b', '0xcc096a755386a711', '0x36e646b392036776', '0x9db335f003f877c4', '0x236b9d6822e85d55', '0xce602f155bb310c8', '0x41bee88b6d06cdf3', '0x5521cea11bf449e2', '0xe377cfa8da9522b4', '0x0cb6bb16ada973eb', '0x304e846c7a1b9d3a', '0x8079c87d4c3722ba', '0x9f8203bbae5511a4', '0x81fa8101218dac3a', '0x7b9922110831c31b', '0xe08b931efb613b96', '0xa9be231880354cd6', '0xe9b13b092cd34b7c']
+n: 64
+t: 3
+N: 192
+Result Algorithm 1:
+[True, 0]
+Result Algorithm 2:
+[True, None]
+Result Algorithm 3:
+[True, None]
+Prime number: 0xffffffff00000001
+MDS matrix:
+[['0x347d28a488a22a3b', '0x7eed34eb862035f3', '0xe1b338a1a769b0bb'],['0x21e6dc6f53709a9b', '0x5776844d2ec8cc1f', '0x24dddf5a998807f5'],['0x675d71f9cd558c68', '0x58baaf1afb376561', '0xe7ddb4f307541571']]
