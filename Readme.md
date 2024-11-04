@@ -79,7 +79,9 @@ will generate `poseidon_params_n254_t3_alpha5_M128.txt` with bare unoptimized pa
 
 The optimization is because in partial rounds, the non linear S box only acts on one element. Allowing us to peel off linear layers unaffected by S box, especially in the MDS matrix and make it sparse. We may change the round constants and define round specific hashes as long as the output is the same.
 
-![alt text](Poseidon_optimized.png)
+![alt text](Opt_Poseidon_by_poseidon_authors.png)
+
+This was constructed from [Horizenlabs](https://github.com/HorizenLabs/poseidon2/blob/main/plain_implementations/src/poseidon/poseidon.rs#L38) and [Sage](https://extgit.iaik.tugraz.at/krypto/hadeshash/-/blob/master/code/poseidonperm_x3_64_24_optimized.sage?ref_type=heads) used as reference in this code.
 
 ## Optimized parameter generation
 
@@ -101,8 +103,8 @@ and it will print a file named `optimized_poseidon_params_n254_t3_alpha5_M128.tx
 2. $M'$ - Presparse matrix as in the picture above
 3. The sparse matrices in the following structure
    1. $M_{0,0} \in \mathbb{F}$
-   2. for partial round $v$ as [$[v_1]$, $[v_2]$....$[v_{R_p}]$] where $[v_i] \in \mathbb{F}^{t-1}$ 
-   3. for partial round $\hat{w}$ as [$[\hat{w}_1]$, $[\hat{w}_2]$....$[\hat{w}_{R_p}]$] where$[\hat{w_i}]\in \mathbb{F}^{t-1}$ 
+   2. for partial round $v$ as [$[V_{R_P-1}]$, $[v_{R_P-2}]$....$[v_{0}]$] where $[v_i] \in \mathbb{F}^{t-1}$ 
+   3. for partial round $\hat{w}$ as [$[\hat{w}_{R_P-1}]$, $[\hat{w}_{R_P-2}]$....$[\hat{w}_{0}]$] where$[\hat{w_i}]\in \mathbb{F}^{t-1}$ 
 
 Steps: for any given curve/field 
 

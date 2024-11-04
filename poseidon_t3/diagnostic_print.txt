@@ -1,0 +1,287 @@
+Average time for unoptimized: 0.07168292999267578
+Input:
+['0x00000000', '0x00000001', '0x00000002']
+Output:
+['0x3813e936', '0x78984241', '0x61f6a6fd']
+
+ BEGIN FIRST FULL ROUND 
+
+First full round index 0
+round constants index 0
+round constants [1714438666, 1853339317, 140226035]
+full_S_box_no 0
+full MDS [ 743560185 1208699853  917125130]
+[ 379849831  743437194   38775651]
+[1059414742 1899109398  197974680]
+First full round index 1
+round constants index 1
+round constants [114391868, 757901499, 1045978387]
+full_S_box_no 1
+full MDS [ 743560185 1208699853  917125130]
+[ 379849831  743437194   38775651]
+[1059414742 1899109398  197974680]
+First full round index 2
+round constants index 2
+round constants [2140590748, 46533769, 1030997853]
+full_S_box_no 2
+full MDS [ 743560185 1208699853  917125130]
+[ 379849831  743437194   38775651]
+[1059414742 1899109398  197974680]
+First full round index 3
+round constants index 3
+round constants [1147687826, 1967503799, 346797284]
+full_S_box_no 3
+full MDS [ 743560185 1208699853  917125130]
+[ 379849831  743437194   38775651]
+[1059414742 1899109398  197974680]
+First full round index 4
+round constants index 4
+round constants [415008055, 542086081, 1082241892]
+full_S_box_no 4
+full MDS [ 743560185 1208699853  917125130]
+[ 379849831  743437194   38775651]
+[1059414742 1899109398  197974680]
+First full round index 5
+round constants index 5
+round constants [1555996571, 2141163681, 1019182018]
+full_S_box_no 5
+full MDS [ 743560185 1208699853  917125130]
+[ 379849831  743437194   38775651]
+[1059414742 1899109398  197974680]
+
+ BEGIN PRE SPARSE ROUND 
+
+Pre presparse round const index 6
+round constants [646606507, 276201649, 879522998]
+Pre sparse matrix [         1          0          0]
+[         0 1916133176 1142509955]
+[         0  181405607  999435729]
+
+ BEGIN PARTIAL ROUND 
+
+
+ SParse round number 0
+Spartial_S_box_no 0
+Pre sparse round const index 7
+round constants [1728960898, 0, 0]
+SParse round matrix M_0_0 743560185
+SParse round matrix: v_collection_index, W_hat_collection_index 18
+SParse round matrix: v[ 18 ]is [257676617, 221325218]
+SParse round matrix: w_hat[ 18 ]is [105686763, 1229222648]
+
+ SParse round number 1
+Spartial_S_box_no 1
+Pre sparse round const index 8
+round constants [665040902, 0, 0]
+SParse round matrix M_0_0 743560185
+SParse round matrix: v_collection_index, W_hat_collection_index 17
+SParse round matrix: v[ 17 ]is [1101070538, 392671141]
+SParse round matrix: w_hat[ 17 ]is [103182842, 313670547]
+
+ SParse round number 2
+Spartial_S_box_no 2
+Pre sparse round const index 9
+round constants [59395560, 0, 0]
+SParse round matrix M_0_0 743560185
+SParse round matrix: v_collection_index, W_hat_collection_index 16
+SParse round matrix: v[ 16 ]is [633389576, 401782115]
+SParse round matrix: w_hat[ 16 ]is [625257043, 1538148815]
+
+ SParse round number 3
+Spartial_S_box_no 3
+Pre sparse round const index 10
+round constants [156140643, 0, 0]
+SParse round matrix M_0_0 743560185
+SParse round matrix: v_collection_index, W_hat_collection_index 15
+SParse round matrix: v[ 15 ]is [1733694465, 1583484131]
+SParse round matrix: w_hat[ 15 ]is [818100410, 375021985]
+
+ SParse round number 4
+Spartial_S_box_no 4
+Pre sparse round const index 11
+round constants [1305799687, 0, 0]
+SParse round matrix M_0_0 743560185
+SParse round matrix: v_collection_index, W_hat_collection_index 14
+SParse round matrix: v[ 14 ]is [1979129104, 568536279]
+SParse round matrix: w_hat[ 14 ]is [654654788, 785592524]
+
+ SParse round number 5
+Spartial_S_box_no 5
+Pre sparse round const index 12
+round constants [1161211142, 0, 0]
+SParse round matrix M_0_0 743560185
+SParse round matrix: v_collection_index, W_hat_collection_index 13
+SParse round matrix: v[ 13 ]is [961778909, 1267827663]
+SParse round matrix: w_hat[ 13 ]is [70649491, 1467433882]
+
+ SParse round number 6
+Spartial_S_box_no 6
+Pre sparse round const index 13
+round constants [1645743495, 0, 0]
+SParse round matrix M_0_0 743560185
+SParse round matrix: v_collection_index, W_hat_collection_index 12
+SParse round matrix: v[ 12 ]is [1650068212, 1953078834]
+SParse round matrix: w_hat[ 12 ]is [1698789005, 1742910880]
+
+ SParse round number 7
+Spartial_S_box_no 7
+Pre sparse round const index 14
+round constants [480873981, 0, 0]
+SParse round matrix M_0_0 743560185
+SParse round matrix: v_collection_index, W_hat_collection_index 11
+SParse round matrix: v[ 11 ]is [183267649, 1454481615]
+SParse round matrix: w_hat[ 11 ]is [1541040707, 1982982322]
+
+ SParse round number 8
+Spartial_S_box_no 8
+Pre sparse round const index 15
+round constants [173072087, 0, 0]
+SParse round matrix M_0_0 743560185
+SParse round matrix: v_collection_index, W_hat_collection_index 10
+SParse round matrix: v[ 10 ]is [1403981140, 1347696086]
+SParse round matrix: w_hat[ 10 ]is [1344020830, 156147568]
+
+ SParse round number 9
+Spartial_S_box_no 9
+Pre sparse round const index 16
+round constants [1138409048, 0, 0]
+SParse round matrix M_0_0 743560185
+SParse round matrix: v_collection_index, W_hat_collection_index 9
+SParse round matrix: v[ 9 ]is [1115904026, 1129014195]
+SParse round matrix: w_hat[ 9 ]is [1960897806, 657371110]
+
+ SParse round number 10
+Spartial_S_box_no 10
+Pre sparse round const index 17
+round constants [1207502874, 0, 0]
+SParse round matrix M_0_0 743560185
+SParse round matrix: v_collection_index, W_hat_collection_index 8
+SParse round matrix: v[ 8 ]is [1064395617, 1632961407]
+SParse round matrix: w_hat[ 8 ]is [920599071, 1294552687]
+
+ SParse round number 11
+Spartial_S_box_no 11
+Pre sparse round const index 18
+round constants [1324514369, 0, 0]
+SParse round matrix M_0_0 743560185
+SParse round matrix: v_collection_index, W_hat_collection_index 7
+SParse round matrix: v[ 7 ]is [1365829268, 497260039]
+SParse round matrix: w_hat[ 7 ]is [169628087, 1284961636]
+
+ SParse round number 12
+Spartial_S_box_no 12
+Pre sparse round const index 19
+round constants [372653035, 0, 0]
+SParse round matrix M_0_0 743560185
+SParse round matrix: v_collection_index, W_hat_collection_index 6
+SParse round matrix: v[ 6 ]is [1759243390, 1426296617]
+SParse round matrix: w_hat[ 6 ]is [1893799284, 1586035433]
+
+ SParse round number 13
+Spartial_S_box_no 13
+Pre sparse round const index 20
+round constants [645872573, 0, 0]
+SParse round matrix M_0_0 743560185
+SParse round matrix: v_collection_index, W_hat_collection_index 5
+SParse round matrix: v[ 5 ]is [287908683, 725741952]
+SParse round matrix: w_hat[ 5 ]is [2145749344, 1301808106]
+
+ SParse round number 14
+Spartial_S_box_no 14
+Pre sparse round const index 21
+round constants [494163153, 0, 0]
+SParse round matrix M_0_0 743560185
+SParse round matrix: v_collection_index, W_hat_collection_index 4
+SParse round matrix: v[ 4 ]is [2000372635, 1904749892]
+SParse round matrix: w_hat[ 4 ]is [31029749, 682444607]
+
+ SParse round number 15
+Spartial_S_box_no 15
+Pre sparse round const index 22
+round constants [555009059, 0, 0]
+SParse round matrix M_0_0 743560185
+SParse round matrix: v_collection_index, W_hat_collection_index 3
+SParse round matrix: v[ 3 ]is [2050279105, 1851538710]
+SParse round matrix: w_hat[ 3 ]is [2100567976, 1018580610]
+
+ SParse round number 16
+Spartial_S_box_no 16
+Pre sparse round const index 23
+round constants [610433918, 0, 0]
+SParse round matrix M_0_0 743560185
+SParse round matrix: v_collection_index, W_hat_collection_index 2
+SParse round matrix: v[ 2 ]is [1339744620, 1465662798]
+SParse round matrix: w_hat[ 2 ]is [1571509465, 1236425329]
+
+ SParse round number 17
+Spartial_S_box_no 17
+Pre sparse round const index 24
+round constants [777618847, 0, 0]
+SParse round matrix M_0_0 743560185
+SParse round matrix: v_collection_index, W_hat_collection_index 1
+SParse round matrix: v[ 1 ]is [226233098, 693056980]
+SParse round matrix: w_hat[ 1 ]is [1589677696, 609742945]
+
+ SParse round number 18
+Spartial_S_box_no 18
+No_round_const_addition
+SParse round matrix M_0_0 743560185
+SParse round matrix: v_collection_index, W_hat_collection_index 0
+SParse round matrix: v[ 0 ]is [379849831, 1059414742]
+SParse round matrix: w_hat[ 0 ]is [390910459, 1902879720]
+
+ LAST FULL ROUND 
+
+
+ Last full round index 0
+round constants index 25
+round constants [558220898, 1578805256, 889463053]
+full_S_box_no 6
+full MDS [ 743560185 1208699853  917125130]
+[ 379849831  743437194   38775651]
+[1059414742 1899109398  197974680]
+
+ Last full round index 1
+round constants index 26
+round constants [136889572, 673244509, 585312960]
+full_S_box_no 7
+full MDS [ 743560185 1208699853  917125130]
+[ 379849831  743437194   38775651]
+[1059414742 1899109398  197974680]
+
+ Last full round index 2
+round constants index 27
+round constants [1726757283, 583048286, 1031879667]
+full_S_box_no 8
+full MDS [ 743560185 1208699853  917125130]
+[ 379849831  743437194   38775651]
+[1059414742 1899109398  197974680]
+
+ Last full round index 3
+round constants index 28
+round constants [65552291, 1263419975, 646487035]
+full_S_box_no 9
+full MDS [ 743560185 1208699853  917125130]
+[ 379849831  743437194   38775651]
+[1059414742 1899109398  197974680]
+
+ Last full round index 4
+round constants index 29
+round constants [107371546, 1186726151, 1721436320]
+full_S_box_no 10
+full MDS [ 743560185 1208699853  917125130]
+[ 379849831  743437194   38775651]
+[1059414742 1899109398  197974680]
+
+ Last full round index 5
+round constants index 30
+round constants [874040938, 49177077, 1098238337]
+full_S_box_no 11
+full MDS [ 743560185 1208699853  917125130]
+[ 379849831  743437194   38775651]
+[1059414742 1899109398  197974680]
+Average time for optimized: 0.0012290477752685547
+Input:
+['0x00000000', '0x00000001', '0x00000002']
+Output:
+['0x3813e936', '0x78984241', '0x61f6a6fd']
