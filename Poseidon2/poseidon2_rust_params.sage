@@ -4,6 +4,7 @@ from math import *
 import itertools
 
 ###########################################################################
+# change curve here: ICICLE supported curves/fie;ds
 # p = 2147483647 #Mersene
 # p = 18446744069414584321 # GoldiLocks
 # p = 2013265921 # BabyBear
@@ -12,13 +13,20 @@ import itertools
 p = 21888242871839275222246405745257275088548364400416034343698204186575808495617 # BN254/BN256
 # p = 21888242871839275222246405745257275088696311157297823662689037894645226208583 #Grumpkin
 # p = 3618502788666131213697322783095070105623107215331596699973092056135872020481 #stark252
+
+## ICICLE unsupported
 # p = 28948022309329048855892746252171976963363056481941560715954676764349967630337 # Pasta (Pallas)
 # p = 28948022309329048855892746252171976963363056481941647379679742748393362948097 # Pasta (Vesta)
 
 n = len(p.bits()) # bit
+# paper stuff, ignore
 # t = 12 # GoldiLocks (t = 12 for sponge, t = 8 for compression)
 # t = 16 # BabyBear (t = 24 for sponge, t = 16 for compression)
-t = 3 # BN254/BN256, BLS12-381, Pallas, Vesta (t = 3 for sponge, t = 2 for compression)
+# t = 3 # BN254/BN256, BLS12-381, Pallas, Vesta (t = 3 for sponge, t = 2 for compression)
+
+# change t here: For ICICLE: t=3,4 for large fields and small fields for now.
+# ICICLE: or small fields: t=3,4,8,12,16,24 are covered in paper. need to checkl industry use
+t = 3
 
 FIELD = 1
 SBOX = 0
