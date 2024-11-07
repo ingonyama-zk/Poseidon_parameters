@@ -4,10 +4,14 @@ from math import *
 import itertools
 
 ###########################################################################
+# p = 2147483647 #Mersene
 # p = 18446744069414584321 # GoldiLocks
 # p = 2013265921 # BabyBear
-p = 52435875175126190479447740508185965837690552500527637822603658699938581184513 # BLS12-381
-# p = 21888242871839275222246405745257275088548364400416034343698204186575808495617 # BN254/BN256
+# p = 52435875175126190479447740508185965837690552500527637822603658699938581184513 # BLS12-381
+# p = 8444461749428370424248824938781546531375899335154063827935233455917409239041 #BLS12-377
+p = 21888242871839275222246405745257275088548364400416034343698204186575808495617 # BN254/BN256
+# p = 21888242871839275222246405745257275088696311157297823662689037894645226208583 #Grumpkin
+# p = 3618502788666131213697322783095070105623107215331596699973092056135872020481 #stark252
 # p = 28948022309329048855892746252171976963363056481941560715954676764349967630337 # Pasta (Pallas)
 # p = 28948022309329048855892746252171976963363056481941647379679742748393362948097 # Pasta (Vesta)
 
@@ -584,12 +588,25 @@ def poseidon2(input_words, matrix_full, matrix_partial, round_constants):
 
     state_words = list(input_words)
 
+    print("Begin Poseidon2\n")
     # First matrix mul
+    print("\n Field Modulus: = ",p)
+    print("\n Full Rounds: R_F = ",R_F_FIXED)
+    print("\n Partial Rounds: R_P= ",R_P_FIXED)
+    print("\n Alpha = ",alpha) 
+    print("\n Full Matrix")
+    print(matrix_full)
+    print("\n Partial Matrix")
+    print(matrix_partial)
     state_words = list(matrix_full * vector(state_words))
 
     # First full rounds
+    print("\n First full rounds\n")
+    print("Round constants:")
     for r in range(0, R_f):
         # Round constants, nonlinear layer, matrix multiplication
+        print("First full round number: ",r)
+        print(round_constants[round_constants_counter:round_constants_counter+t])
         for i in range(0, t):
             state_words[i] = state_words[i] + round_constants[round_constants_counter]
             round_constants_counter += 1
@@ -598,17 +615,25 @@ def poseidon2(input_words, matrix_full, matrix_partial, round_constants):
         state_words = list(matrix_full * vector(state_words))
 
     # Middle partial rounds
+    print("\n Middle partial rounds\n")
+    print("Round constants:")
     for r in range(0, R_P_FIXED):
         # Round constants, nonlinear layer, matrix multiplication
+        print("Middle partial round number: ",r)
+        print(round_constants[round_constants_counter:round_constants_counter+t])          
         for i in range(0, t):
-            state_words[i] = state_words[i] + round_constants[round_constants_counter]
+            state_words[i] = state_words[i] + round_constants[round_constants_counter]         
             round_constants_counter += 1
         state_words[0] = (state_words[0])^alpha
         state_words = list(matrix_partial * vector(state_words))
 
     # Last full rounds
+    print("\n Last full rounds\n")
+    print("Round constants:")
     for r in range(0, R_f):
         # Round constants, nonlinear layer, matrix multiplication
+        print("Last full round number: ",r)
+        print(round_constants[round_constants_counter:round_constants_counter+t])
         for i in range(0, t):
             state_words[i] = state_words[i] + round_constants[round_constants_counter]
             round_constants_counter += 1
@@ -639,13 +664,14 @@ def to_hex(value):
     value = "0x" + value.zfill(l - 2)
     print("from_hex(\"{}\"),".format(value))
 
-print("use super::poseidon::PoseidonParams;")
-print("use bellman_ce::pairing::{bls12_381::Bls12, ff::ScalarEngine, from_hex};")
-print("type Scalar = <Bls12 as ScalarEngine>::Fr;")
-print("use lazy_static::lazy_static;")
-print("use std::sync::Arc;")
-print()
-print("lazy_static! {")
+# IK removed this: relevant for rust code with bellman
+#print("use super::poseidon::PoseidonParams;")
+#print("use bellman_ce::pairing::{bls12_381::Bls12, ff::ScalarEngine, from_hex};")
+#print("type Scalar = <Bls12 as ScalarEngine>::Fr;")
+#print("use lazy_static::lazy_static;")
+#print("use std::sync::Arc;")
+#print()
+#print("lazy_static! {")
 
 
 # # MDS
@@ -659,55 +685,63 @@ print("lazy_static! {")
 # print()
 
 # Efficient partial matrix (diagonal - 1)
-print("pub static ref MAT_DIAG{}_M_1: Vec<Scalar> = vec![".format(t))
-for val in MATRIX_PARTIAL_DIAGONAL_M_1:
-    to_hex(val)
-print("];")
-print()
+# IK removed this: relevant for rust code with bellman
+#print("pub static ref MAT_DIAG{}_M_1: Vec<Scalar> = vec![".format(t))
+#for val in MATRIX_PARTIAL_DIAGONAL_M_1:
+#    to_hex(val)
+#print("];")
+#print()
 
 # Efficient partial matrix (full)
-print("pub static ref MAT_INTERNAL{}: Vec<Vec<Scalar>> = vec![".format(t))
-for vec in MATRIX_PARTIAL:
-    print("vec![", end="")
-    for val in vec:
-        to_hex(val)
-    print("],")
-print("];")
-print()
+# IK removed this: relevant for rust code with bellman
+# print("pub static ref MAT_INTERNAL{}: Vec<Vec<Scalar>> = vec![".format(t))
+#for vec in MATRIX_PARTIAL:
+#    print("vec![", end="")
+#    for val in vec:
+#        to_hex(val)
+#    print("],")
+#print("];")
+#print()
 
 # Round constants
-print("pub static ref RC{}: Vec<Vec<Scalar>> = vec![".format(t))
-for (i,val) in enumerate(round_constants):
-    if i % t == 0:
-        print("vec![", end="")
-    to_hex(val)
-    if i % t == t - 1:
-        print("],")
-print("];")
-print()
+# IK removed this: relevant for rust code with bellman
+#print("pub static ref RC{}: Vec<Vec<Scalar>> = vec![".format(t))
+#for (i,val) in enumerate(round_constants):
+#    if i % t == 0:
+#        print("vec![", end="")
+#    to_hex(val)
+#    if i % t == t - 1:
+#        print("],")
+#print("];")
+#print()
 
-print("pub static ref POSEIDON_{}_PARAMS: Arc<PoseidonParams<Scalar>> = Arc::new(PoseidonParams::new({}, {}, {}, {}, &MAT_DIAG{}_M_1, &RC{}));".format(t, t, alpha, R_F_FIXED, R_P_FIXED , t, t))
+#print("pub static ref POSEIDON_{}_PARAMS: Arc<PoseidonParams<Scalar>> = Arc::new(PoseidonParams::new({}, {}, {}, {}, &MAT_DIAG{}_M_1, &RC{}));".format(t, t, alpha, R_F_FIXED, R_P_FIXED , t, t))
 
-print("}")
-print()
-print()
+#print("}")
+#print()
+#print()
 
 state_in  = vector([F(i) for i in range(t)])
 # state_out = poseidon(state_in, MDS, round_constants)
 state_out = poseidon2(state_in, MATRIX_FULL, MATRIX_PARTIAL, round_constants)
 
-for (i,val) in enumerate(state_in):
-    if i % t == 0:
-        print("vec![", end="")
-    to_hex(val)
-    if i % t == t - 1:
-        print("],")
-print("];")
+print("\n\n Test Vectors\n")
+print("Input state\n ",state_in)
+print("Output state\n ",state_out)
 
-for (i,val) in enumerate(state_out):
-    if i % t == 0:
-        print("vec![", end="")
-    to_hex(val)
-    if i % t == t - 1:
-        print("],")
-print("];")
+# IK removed this: relevant for rust code with bellman
+#for (i,val) in enumerate(state_in):
+#    if i % t == 0:
+#        print("vec![", end="")
+#    to_hex(val)
+#    if i % t == t - 1:
+#        print("],")
+#print("];")
+
+#for (i,val) in enumerate(state_out):
+#    if i % t == 0:
+#        print("vec![", end="")
+#    to_hex(val)
+#    if i % t == t - 1:
+#        print("],")
+#print("];")

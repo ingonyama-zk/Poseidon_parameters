@@ -52,11 +52,11 @@ Allowed Sbox is $\alpha=3$ if $p\neq 1\mod 3$ or $\alpha=5$ if $p=1\mod 3$ , $p\
   * hex 0x800000000000011000000000000000000000000000000000000000000000001
   * take parameters from [here](https://github.com/starkware-industries/poseidon), this is the only case we have $\alpha=3$  since $p\neq 1 \mod 3$
 
-# Unoptimized vs Optimized Diagram
+# Unoptimized vs Optimized Poseidon
 
-[alt!](Poseidon-unoptvsopt_poseidon.png)
+![alt text](Poseidon-unoptvsopt_poseidon.png)
 
-# Unoptimized Poseidon Parameter generation
+## Unoptimized Poseidon Parameter generation
 
 Generate bare parameters using the sage script [Poseidon/generate_params_poseidon.sage](Poseidon/generate_params_poseidon.sage), in most cases one may have different $t$ sizes, and rarely $\alpha$. This script can generate bare parameters for any $t$.
 
@@ -79,15 +79,17 @@ example:
   ```
 will generate `poseidon_params_n254_t3_alpha5_M128.txt` with bare unoptimized parameters. For all icicle supported curves/fields bare parameters for $t=3$ can be found in [Poseidon/unoptimized_parameters_t3](Poseidon/unoptimized_parameters_t3)
 
-# Optimized Poseidon
+## Optimized Poseidon
 
 The optimization is because in partial rounds, the non linear S box only acts on one element. Allowing us to peel off linear layers unaffected by S box, especially in the MDS matrix and make it sparse. We may change the round constants and define round specific hashes as long as the output is the same.
 
 This was constructed from [Horizenlabs](https://github.com/HorizenLabs/poseidon2/blob/main/plain_implementations/src/poseidon/poseidon.rs#L38) and [Sage](https://extgit.iaik.tugraz.at/krypto/hadeshash/-/blob/master/code/poseidonperm_x3_64_24_optimized.sage?ref_type=heads) used as reference in this code.
 
-## Optimized parameter generation
+### Optimized parameter generation
 
 From the [Poseidon](https://eprint.iacr.org/2019/458.pdf) Appendix B, $M'$ is the presparse matrix, and $M''$ are the sparse matrices. $M_{0,0}$ is a constant for all sparse matrices in the partial rounds for a given field and $t$ size. 
+
+![alt text](image.png)
 
 We simply print the results from the [script](https://extgit.iaik.tugraz.at/krypto/hadeshash/-/blob/master/code/poseidonperm_x3_64_24_optimized.sage) by changing the relevant parameters. The results for all ICICLE supported curves/fields for $t=3$ is in [Poseidon/optimized_parameters_t3](Poseidon/optimized_parameters_t3)
 
@@ -98,6 +100,7 @@ sage poseidon_bn254_n254_t3_alpha5_M128.sage
 ```
 
 and it will print a file named `optimized_poseidon_params_n254_t3_alpha5_M128.txt` with the following data
+
 
 1. Optimized round constants
 2. $M'$ - Presparse matrix as in the picture above

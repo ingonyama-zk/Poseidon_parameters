@@ -1,0 +1,103 @@
++++ R_F = 8, R_P = 23 +++
+Begin Poseidon2
+
+
+ Field Modulus: =  18446744069414584321
+
+ Full Rounds: R_F =  8
+
+ Partial Rounds: R_P=  23
+
+ Alpha =  7
+
+ Full Matrix
+[2 1 1]
+[1 2 1]
+[1 1 2]
+
+ Partial Matrix
+[2 1 1]
+[1 2 1]
+[1 1 3]
+
+ First full rounds
+
+Round constants:
+First full round number:  0
+[16211577581300741170, 9122667159073486494, 6811476417325531086]
+First full round number:  1
+[13955590287617532465, 7614593786737084981, 7267880976640660035]
+First full round number:  2
+[16412982002646743450, 2024279976558649845, 14546789828292696714]
+First full round number:  3
+[12772349014379145555, 16769168626642686943, 15450073396591780385]
+
+ Middle partial rounds
+
+Round constants:
+Middle partial round number:  0
+[15076159333978841931, 0, 0]
+Middle partial round number:  1
+[17532749924839662949, 0, 0]
+Middle partial round number:  2
+[5958301765810150703, 0, 0]
+Middle partial round number:  3
+[2191862113484902258, 0, 0]
+Middle partial round number:  4
+[12127438684092710971, 0, 0]
+Middle partial round number:  5
+[16095696679713585528, 0, 0]
+Middle partial round number:  6
+[10857359320767307794, 0, 0]
+Middle partial round number:  7
+[10874685952903722132, 0, 0]
+Middle partial round number:  8
+[7331877881776705875, 0, 0]
+Middle partial round number:  9
+[15423863691735908356, 0, 0]
+Middle partial round number:  10
+[4346568788801741598, 0, 0]
+Middle partial round number:  11
+[1644346403445835703, 0, 0]
+Middle partial round number:  12
+[13338702393161294471, 0, 0]
+Middle partial round number:  13
+[14668286031980029932, 0, 0]
+Middle partial round number:  14
+[14549624669384417773, 0, 0]
+Middle partial round number:  15
+[2489405781373142533, 0, 0]
+Middle partial round number:  16
+[1816424903606459812, 0, 0]
+Middle partial round number:  17
+[1731292154473422839, 0, 0]
+Middle partial round number:  18
+[18397658130901529613, 0, 0]
+Middle partial round number:  19
+[13474860104424927575, 0, 0]
+Middle partial round number:  20
+[10493400926447519006, 0, 0]
+Middle partial round number:  21
+[3263723740862925802, 0, 0]
+Middle partial round number:  22
+[9659532280302060651, 0, 0]
+
+ Last full rounds
+
+Round constants:
+Last full round number:  0
+[15964510430813597612, 1226933974373210412, 10327602212012730556]
+Last full round number:  1
+[14293688825375069289, 3970930205739903787, 18065090748041366283]
+Last full round number:  2
+[7880022772758404667, 23424159971040801, 18244991100371204424]
+Last full round number:  3
+[1138518238761633186, 18041994108301832080, 5200637079455143048]
+
+
+ Test Vectors
+
+Input state
+  (0, 1, 2)
+Output state
+  [5170614715911085010, 8450772004460659098, 6852465332832092485]
