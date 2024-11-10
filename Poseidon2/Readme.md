@@ -69,15 +69,15 @@ There are only two matrices: There is one type of matrix for full round and anot
 ### $t=4\cdot t'$ where $t'$ is an integer.
 
 
-* The big difference compared to poseidon is: Full Matrix $M_{full}$ (Referred in paper as $M_{\mathcal{E}}$). These are hard coded (same for all primes $p>2^{30}$) for any fixed state size $t=4\cdot t'$ where $t'$ is an integer. 
-    ![alt text](image.png)
-    $$
-    M_{4} = \begin{pmatrix}
-    5 & 7 & 1 & 3 \\
-    4& 6 & 1 & 1 \\
-    1 & 3 & 5 & 7\\
-    1 & 1 & 4 & 6\\
-    \end{pmatrix} $$
+**Full Matrix** $M_{full}$ (Referred in paper as $M_{\mathcal{E}}$). These are hard coded (same for all primes $p>2^{30}$) for any fixed state size $t=4\cdot t'$ where $t'$ is an integer. ![alt text](image.png)
+ 
+$$
+M_{4} = \begin{pmatrix}
+5 & 7 & 1 & 3 \\
+4& 6 & 1 & 1 \\
+1 & 3 & 5 & 7\\
+1 & 1 & 4 & 6\\
+\end{pmatrix} $$
 
 As per the [paper](https://eprint.iacr.org/2023/323.pdf) and the [code](https://github.com/HorizenLabs/poseidon2/blob/main/poseidon2_rust_params.sage) this structure is always maintained and is always MDS for any prime $p>2^{30}$. So for a given state size $t$ the $M_{full}$ is the SAME for all prime $p$.  
 
@@ -89,7 +89,7 @@ M_{full}^{8\times 8} = \begin{pmatrix}
 M_4 & 2\cdot M_4 \\
 \end{pmatrix} $$
 
-* Partial Matrix $M_{partial}$(referred in paper as $M_{\mathcal{I}}$) - There is only ONE partial matrix for all the partial rounds and has non zero diagonal entries along the diagonal and $1$ everywhere else. 
+**Partial Matrix** $M_{partial}$(referred in paper as $M_{\mathcal{I}}$) - There is only ONE partial matrix for all the partial rounds and has non zero diagonal entries along the diagonal and $1$ everywhere else.
 
 $$
 M_{Partial}^{t\times t} = \begin{pmatrix}
@@ -123,6 +123,7 @@ $$M_{full} = \begin{pmatrix}
 #### $t=2$
 
 In all ICICLE supported curves we get for $t=2$ [/Poseidon2/poseidon2_parameters_t2](/Poseidon2/poseidon2_parameters_t2)
+
 $$M_{full} = \begin{pmatrix}
 2 & 1 \\
 1 & 2 \\
