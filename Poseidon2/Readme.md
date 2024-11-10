@@ -82,6 +82,7 @@ There are only two matrices: There is one type of matrix for full round and anot
 As per the [paper](https://eprint.iacr.org/2023/323.pdf) and the [code](https://github.com/HorizenLabs/poseidon2/blob/main/poseidon2_rust_params.sage) this structure is always maintained and is always MDS for any prime $p>2^{30}$. So for a given state size $t$ the $M_{full}$ is the SAME for all prime $p$.  
 
 eg for $t=8$ the matrix looks like
+
 $$
 M_{full}^{8\times 8} = \begin{pmatrix}
 2\cdot M_4 & M_4 \\
@@ -89,6 +90,7 @@ M_4 & 2\cdot M_4 \\
 \end{pmatrix} $$
 
 * Partial Matrix $M_{partial}$(referred in paper as $M_{\mathcal{I}}$) - There is only ONE partial matrix for all the partial rounds and has non zero diagonal entries along the diagonal and $1$ everywhere else. 
+
 $$
 M_{Partial}^{t\times t} = \begin{pmatrix}
 \mu_0 &1 & \ldots & 1 \\
@@ -96,6 +98,7 @@ M_{Partial}^{t\times t} = \begin{pmatrix}
 \vdots & \vdots & \ddots & \vdots \\
  1 & 1 &\ldots & \mu_{t-1}\\
 \end{pmatrix} $$
+
 where $\mu_i \in \mathbb{F}$. In general this matrix is different for each prime since one has to find values that satisfy some inequalities in a field. However unlike Poseidon there is only one $M_{partial}$ for all partial rounds. 
 
 ### $t=2,3$
