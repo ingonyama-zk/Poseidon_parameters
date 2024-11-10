@@ -1,0 +1,111 @@
++++ R_F = 12, R_P = 24 +++
+Begin Poseidon2
+
+
+ Field Modulus: =  2013265921
+
+ Full Rounds: R_F =  12
+
+ Partial Rounds: R_P=  24
+
+ Alpha =  7
+
+ Full Matrix
+[2 1]
+[1 2]
+
+ Partial Matrix
+[2 1]
+[1 3]
+
+ First full rounds
+
+Round constants:
+First full round number:  0
+[1990759210, 196289859]
+First full round number:  1
+[1419844224, 703632265]
+First full round number:  2
+[1267371713, 1067644834]
+First full round number:  3
+[736361740, 1790381117]
+First full round number:  4
+[215542001, 976537840]
+First full round number:  5
+[1007796087, 669726707]
+
+ Middle partial rounds
+
+Round constants:
+Middle partial round number:  0
+[115126221, 0]
+Middle partial round number:  1
+[436030250, 0]
+Middle partial round number:  2
+[483222979, 0]
+Middle partial round number:  3
+[926130370, 0]
+Middle partial round number:  4
+[414463828, 0]
+Middle partial round number:  5
+[785858678, 0]
+Middle partial round number:  6
+[915379110, 0]
+Middle partial round number:  7
+[243279053, 0]
+Middle partial round number:  8
+[999237786, 0]
+Middle partial round number:  9
+[1331362427, 0]
+Middle partial round number:  10
+[1690839912, 0]
+Middle partial round number:  11
+[1982092928, 0]
+Middle partial round number:  12
+[448048175, 0]
+Middle partial round number:  13
+[1017509518, 0]
+Middle partial round number:  14
+[347949489, 0]
+Middle partial round number:  15
+[1389378325, 0]
+Middle partial round number:  16
+[147682483, 0]
+Middle partial round number:  17
+[517674282, 0]
+Middle partial round number:  18
+[808929658, 0]
+Middle partial round number:  19
+[1233807596, 0]
+Middle partial round number:  20
+[1796338216, 0]
+Middle partial round number:  21
+[555827604, 0]
+Middle partial round number:  22
+[1678500026, 0]
+Middle partial round number:  23
+[1272021569, 0]
+
+ Last full rounds
+
+Round constants:
+Last full round number:  0
+[537478708, 309207768]
+Last full round number:  1
+[1121063889, 1719514663]
+Last full round number:  2
+[691297960, 1316613626]
+Last full round number:  3
+[36355104, 917038794]
+Last full round number:  4
+[99687749, 824002082]
+Last full round number:  5
+[879588760, 1639026419]
+
+
+ Test Vectors
+
+Input state
+  (0, 1)
+Output state
+  [869011615, 833751247]

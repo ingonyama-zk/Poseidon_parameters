@@ -4,7 +4,7 @@ from math import *
 import itertools
 
 ###########################################################################
-# change curve here: ICICLE supported curves/fie;ds
+# ICICLE:  change curve here: ICICLE supported curves/fie;ds
 # p = 2147483647 #Mersene
 # p = 18446744069414584321 # GoldiLocks
 # p = 2013265921 # BabyBear
@@ -25,7 +25,9 @@ n = len(p.bits()) # bit
 # t = 3 # BN254/BN256, BLS12-381, Pallas, Vesta (t = 3 for sponge, t = 2 for compression)
 
 # change t here: For ICICLE: t=3,4 for large fields and small fields for now.
-# ICICLE: or small fields: t=3,4,8,12,16,24 are covered in paper. need to checkl industry use
+
+# ICICLE - CHANGE state size HERE: : t=2,3,4,8,12,16,20,24 are covered in paper. (Mersene, goldilocks,babybear all sizes)
+# large fields 255 bits recommended t =2,3,4,8
 t = 3
 
 FIELD = 1

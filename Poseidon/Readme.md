@@ -2,9 +2,9 @@
 
 For icicle supported curves/fields, for $t=3$
 
-1. Unoptimized Poseidon constants are in [Poseidon/](Poseidon/unoptimized_parameters_t3)
-2. Optimized Poseidon constants are in [Poseidon/optimized_parameters_t3](Poseidon/optimized_parameters_t3)
-3. poseidon hash for bare and optimized can be found in [Poseidon/poseidon_t3](Poseidon/poseidon_t3)
+1. Unoptimized Poseidon constants are in [Poseidon/unoptimized_parameters_t3](/Poseidon/unoptimized_parameters_t3)
+2. Optimized Poseidon constants are in [Poseidon/optimized_parameters_t3](/Poseidon/optimized_parameters_t3)
+3. poseidon hash for bare and optimized can be found in [Poseidon/poseidon_t3](/Poseidon/Poseidon/poseidon_t3)
    1. also has text_Vectors for three input, where the results of bare and optimized poseidon agree.
 
 For sage to run in terminal, it needs python venv with some packages. most dependencies are part of the [Ingonyama poseidon hash package](https://pypi.org/project/poseidon-hash/), so it is easy to just install it, since it installs numpy,numba etc all required by sage. But all data generated in this repository comes from first principles implementation of poseidon hash found [here](https://extgit.iaik.tugraz.at/krypto/hadeshash)
@@ -58,7 +58,7 @@ Allowed Sbox is $\alpha=3$ if $p\neq 1\mod 3$ or $\alpha=5$ if $p=1\mod 3$ , $p\
 
 ## Unoptimized Poseidon Parameter generation
 
-Generate bare parameters using the sage script [Poseidon/generate_params_poseidon.sage](Poseidon/generate_params_poseidon.sage), in most cases one may have different $t$ sizes, and rarely $\alpha$. This script can generate bare parameters for any $t$.
+Generate bare parameters using the sage script [Poseidon/generate_params_poseidon.sage](/Poseidon/generate_params_poseidon.sage), in most cases one may have different $t$ sizes, and rarely $\alpha$. This script can generate bare parameters for any $t$.
 
 **usage:** sage generate_params_poseidon.sage 1 <s_box> <field_size> <num_cells> <_alpha> <security_level> <modulus_hex>"
 
@@ -77,7 +77,7 @@ example:
   ```
   sage generate_params_poseidon.sage 1 0 254 3 5 128 0x30644E72E131A029B85045B68181585D2833E84879B9709143E1F593F0000001
   ```
-will generate `poseidon_params_n254_t3_alpha5_M128.txt` with bare unoptimized parameters. For all icicle supported curves/fields bare parameters for $t=3$ can be found in [Poseidon/unoptimized_parameters_t3](Poseidon/unoptimized_parameters_t3)
+will generate `poseidon_params_n254_t3_alpha5_M128.txt` with bare unoptimized parameters. For all icicle supported curves/fields bare parameters for $t=3$ can be found in [Poseidon/unoptimized_parameters_t3](/Poseidon/unoptimized_parameters_t3)
 
 ## Optimized Poseidon
 
@@ -91,7 +91,7 @@ From the [Poseidon](https://eprint.iacr.org/2019/458.pdf) Appendix B, $M'$ is th
 
 ![alt text](image.png)
 
-We simply print the results from the [script](https://extgit.iaik.tugraz.at/krypto/hadeshash/-/blob/master/code/poseidonperm_x3_64_24_optimized.sage) by changing the relevant parameters. The results for all ICICLE supported curves/fields for $t=3$ is in [Poseidon/optimized_parameters_t3](Poseidon/optimized_parameters_t3)
+We simply print the results from the [script](https://extgit.iaik.tugraz.at/krypto/hadeshash/-/blob/master/code/poseidonperm_x3_64_24_optimized.sage) by changing the relevant parameters. The results for all ICICLE supported curves/fields for $t=3$ is in [Poseidon/optimized_parameters_t3](/Poseidon/optimized_parameters_t3)
 
 **Go to folder poseidon_t3**
 
@@ -111,8 +111,8 @@ and it will print a file named `optimized_poseidon_params_n254_t3_alpha5_M128.tx
 
 Steps: for any given curve/field 
 
-1. First generate bare parameters for a given $t$, $\alpha$ from [this code](Poseidon/generate_params_poseidon.sage)
-2. Then update in the script (see examples in [Poseidon/poseidon_t3](Poseidon/poseidon_t3)) the parameters relevant for ur use case.
+1. First generate bare parameters for a given $t$, $\alpha$ from [this code](/Poseidon/generate_params_poseidon.sage)
+2. Then update in the script (see examples in [Poseidon/poseidon_t3](/Poseidon/poseidon_t3)) the parameters relevant for ur use case.
      * $N=\log_2 p$
      * $t$
      * $R_F$
@@ -120,7 +120,7 @@ Steps: for any given curve/field
      * $prime$
      * round_constants (bare)
      * MDS_matrix (bare)
-3. We have put several examples for $t=3$ case in [Poseidon/poseidon_t3](Poseidon/poseidon_t3), the scripts
+3. We have put several examples for $t=3$ case in [Poseidon/poseidon_t3](/Poseidon/poseidon_t3), the scripts
    * generate the hash of the bare instance, 
    * calculate the optimized constants and print it in a file
    * Compute the optimized hash and check that the bare hash and optimized hash agree. 
